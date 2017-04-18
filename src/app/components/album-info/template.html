@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="photo in $ctrl.photos">
+        <span class="thumbnail">
+            <span class="text-ellipsis thumb-title" ng-bind="photo.title"></span>
+            <img class="img-responsive" ng-src="{{photo.url}}" alt="">
+        </span>
+    </div>
+</div>

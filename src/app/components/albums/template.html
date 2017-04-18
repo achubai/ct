@@ -1,0 +1,14 @@
+<div id="sidebar-wrapper">
+    <search></search>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="album in $ctrl.albumsList" ui-sref-active="active">
+            <a ui-sref="main.albums.album({id: album.id})" ng-bind="album.title"></a>
+        </li>
+        <li ng-if="!$ctrl.albumsList.length" class="text-center"><b ng-bind="$ctrl.searchText"></b> not found</li>
+    </ul>
+</div>
+
+<div class="app-content">
+    <a ui-sref="main.users.create" class="btn btn-primary pull-right" ui-sref-active="hidden">New Album</a>
+    <div ui-view="content"></div>
+</div>

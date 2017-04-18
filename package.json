@@ -1,0 +1,51 @@
+{
+  "name": "ct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-messages": "^1.6.4",
+    "angular-toastr": "^2.1.1",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.0-rc.1",
+    "bootstrap": "^3.3.7",
+    "chai": "^3.5.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "file-loader": "^0.11.1",
+    "hapi": "^16.1.1",
+    "highcharts-ng": "^1.1.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "mocha": "^3.2.0",
+    "ng-annotate": "^1.2.1",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "sinon": "^2.1.0",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  },
+  "scripts": {
+    "start": "serve:server && serve:frontend",
+    "test:server": "mocha server/**/*.spec.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "serve:server": "nodemon server/app.js",
+    "serve:frontend": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achubai/ct.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achubai/ct/issues"
+  },
+  "homepage": "https://github.com/achubai/ct#readme"
+}

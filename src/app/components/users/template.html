@@ -1,0 +1,14 @@
+<div id="sidebar-wrapper">
+    <search></search>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="user in $ctrl.usersList" ui-sref-active="active">
+            <a ui-sref="main.users.user({id: user.id})" ng-bind="user.name"></a>
+        </li>
+        <li ng-if="!$ctrl.usersList.length" class="text-center"><b ng-bind="$ctrl.searchText"></b> not found</li>
+    </ul>
+</div>
+
+<div class="app-content">
+    <a ui-sref="main.users.create" class="btn btn-primary pull-right" ui-sref-active="hidden">New User</a>
+    <div ui-view="content"></div>
+</div>

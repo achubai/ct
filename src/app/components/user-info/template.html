@@ -1,0 +1,68 @@
+<h1 ng-if="$ctrl.create">Create user</h1>
+<form name="$ctrl.userForm" novalidate>
+    <fieldset ng-disabled="$ctrl.isDisabled">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Name" ng-model="$ctrl.user.name" required>
+
+                    <div ng-messages="$ctrl.userForm.name.$error"  ng-if="$ctrl.userForm.$dirty || $ctrl.userForm.$submitted">
+                        <div class="help-block" ng-message="required">You did not enter a field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Login">Login</label>
+                    <input type="text" class="form-control" id="Login" placeholder="Login" ng-model="$ctrl.user.username">
+                </div>
+                <div class="form-group">
+                    <label for="CompanyName">Company Name</label>
+                    <input type="text" class="form-control" id="CompanyName" placeholder="Company Name" ng-model="$ctrl.user.company.name">
+                </div>
+                <div class="form-group">
+                    <label for="CatchPhrase">Catch Phrase</label>
+                    <input type="text" class="form-control" id="CatchPhrase" placeholder="Catch Phrase" ng-model="$ctrl.user.company.catchPhrase">
+                </div>
+                <div class="form-group">
+                    <label for="bs">BS</label>
+                    <input type="text" class="form-control" id="bs" placeholder="BS" ng-model="$ctrl.user.company.bs">
+                </div>
+                <div class="form-group">
+                    <label for="Website">Website</label>
+                    <input type="text" class="form-control" id="Website" placeholder="Website" ng-model="$ctrl.user.website">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone" ng-model="$ctrl.user.phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" ng-model="$ctrl.user.email">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="City" ng-model="$ctrl.user.address.city">
+                </div>
+                <div class="form-group">
+                    <label for="street">Street</label>
+                    <input type="text" class="form-control" id="street" placeholder="Street" ng-model="$ctrl.user.address.street">
+                </div>
+                <div class="form-group">
+                    <label for="suite">Suite</label>
+                    <input type="text" class="form-control" id="suite" placeholder="Suite" ng-model="$ctrl.user.address.suite">
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" class="form-control" id="zipcode" placeholder="Zip Code" ng-model="$ctrl.user.address.zipcode">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <a href="" class="btn btn-primary" ng-click="$ctrl.isDisabled = false" ng-if="$ctrl.isDisabled">Edit</a>
+    <a href="" class="btn btn-danger pull-right" ng-if="!$ctrl.isDisabled && !$ctrl.create" ng-click="$ctrl.removeUser()">Remove User</a>
+    <button type="submit" class="btn btn-primary" ng-if="!$ctrl.isDisabled && !$ctrl.create" ng-click="$ctrl.updateUser()">Save</button>
+    <button type="submit" class="btn btn-primary" ng-if="$ctrl.create" ng-click="$ctrl.createUser()">Create</button>
+    <a href="" class="btn" ng-if="!$ctrl.isDisabled" ng-click="$ctrl.cancel()">Cancel</a>
+</form>

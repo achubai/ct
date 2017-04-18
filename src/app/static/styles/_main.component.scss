@@ -1,0 +1,46 @@
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    top: 52px;
+    bottom: 0;
+    width: 250px;
+    margin: auto 0 auto -250px;
+    overflow-y: auto;
+    background: #eee;
+    padding: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.app-content {
+    margin-left: 250px;
+    margin-top: 54px;
+    padding: 15px;
+}
+
+.list-group {
+    margin: 0;
+}
+
+.app-search {
+    padding-bottom: 10px;
+
+    .input-group-addon {
+        padding: 0;
+        background: white !important;
+    }
+    .form-control {
+        border-right:0;
+        box-shadow:0 0 0;
+        border-color:#ccc;
+    }
+    button {
+        height: 32px;
+        border:0;
+        background:transparent;
+        padding: 0 15px;
+    }
+}
